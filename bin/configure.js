@@ -35,17 +35,6 @@ try {
 
 try {
   e("Checking for node.js package 'socket.io-client'...");
-  var __ = require('socket.io-client');
-} catch (err) {
-  e("ERROR: Could not find underscore package");
-  e("npm install underscore");
-  e("... or ...");
-  e("https://github.com/documentcloud/underscore/");
-  process.exit(1);
-}
-
-try {
-  e("Checking for node.js package 'socket.io-client'...");
   var client_io = require('socket.io-client');
 } catch (err) {
   e("ERROR: Could not find socket.io-client package");
