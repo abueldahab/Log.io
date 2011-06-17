@@ -34,22 +34,24 @@ try {
 }
 
 try {
-  e("Checking for node.js package 'Socket.io-node-client'...");
-  var client_io = require('socket.io.client/io-client.js').io;
+  e("Checking for node.js package 'socket.io-client'...");
+  var __ = require('socket.io-client');
+} catch (err) {
+  e("ERROR: Could not find underscore package");
+  e("npm install underscore");
+  e("... or ...");
+  e("https://github.com/documentcloud/underscore/");
+  process.exit(1);
+}
+
+try {
+  e("Checking for node.js package 'socket.io-client'...");
+  var client_io = require('socket.io-client');
 } catch (err) {
   e("ERROR: Could not find socket.io-client package");
+  e("npm install socket.io-client");
+  e("... or ...");
   e("https://github.com/remy/Socket.io-node-client");
-  e("");
-  e("NOTE: This one is tricky since there's no npm package.");
-  e("Drop repo into /usr/local/lib/node/socket.io.client/");
-  e("Be sure to recursively clone the repo:");
-  e("git submodule update --init --recursive");
-  e("");
-  e("Ultimately you should end up with:");
-  e("/usr/local/lib/node/socket.io.client/io-client.js");
-  e("/usr/local/lib/node/socket.io.client/socket.io-node/");
-  e("/usr/local/lib/node/socket.io.client/socket.io-node/lib/socket.io/utils");
-  e("/usr/local/lib/node/socket.io.client/socket.io-node/support/node-websocket-client/lib/websocket");
   process.exit(1);
 }
 

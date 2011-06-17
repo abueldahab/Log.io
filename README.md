@@ -19,7 +19,7 @@ Users create *stream* and *history* screens to view and search log messages.
 
 [underscore](http://documentcloud.github.com/underscore/)
 
-[socket.io-Client](https://github.com/remy/Socket.io-node-client)
+[socket.io-client](https://github.com/remy/Socket.io-node-client)
 
 ## Compatibility
 
